@@ -1,0 +1,18 @@
+object DtModPrincipal: TDtModPrincipal
+  OldCreateOrder = False
+  Height = 323
+  Width = 454
+  object FDConnPrincipal: TFDConnection
+    Left = 56
+    Top = 40
+  end
+  object FDPhysPgDriverLink1: TFDPhysPgDriverLink
+    Left = 184
+    Top = 40
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnPrincipal
+    Left = 48
+    Top = 104
+  end
+end

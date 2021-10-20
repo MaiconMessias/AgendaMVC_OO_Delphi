@@ -1,0 +1,16 @@
+unit UntEnderecoController;
+
+interface
+
+
+
+type
+  TEnderecoController = class
+    //class function verificaCampos(Endereco: IEndereco): boolean;
+  end;
+
+implementation
+
+{ TEnderecoController }
+
+end.

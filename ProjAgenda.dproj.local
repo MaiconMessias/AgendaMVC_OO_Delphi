@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/10/18 14:56:37.000.348,=C:\Users\windows10\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/10/18 14:57:03.000.112,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\UntPrincipal.pas=C:\Users\windows10\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/10/18 14:57:03.000.112,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\UntPrincipal.dfm=C:\Users\windows10\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/10/18 14:57:12.000.800,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\ProjeAgenda2.dproj=C:\Users\windows10\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/10/18 15:01:59.000.777,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\ProjAgenda.dproj=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\ProjeAgenda2.dproj</Transaction>
+    <Transaction>2021/10/18 22:49:51.000.603,=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Unit1.pas</Transaction>
+    <Transaction>2021/10/18 22:50:38.000.571,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Unit1.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\UntDtModPrincipal.pas</Transaction>
+    <Transaction>2021/10/18 22:50:38.000.571,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Unit1.dfm=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\UntDtModPrincipal.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

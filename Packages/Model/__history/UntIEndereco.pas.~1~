@@ -1,0 +1,15 @@
+unit UntIEndereco;
+
+interface
+
+type
+  IEndereco = interface
+    function Id(Value: integer): integer;
+    function Logradouro(Value: string): string;
+    function Cep(Value: integer): integer;
+    function Numero(Value: integer): integer;
+  end;
+
+implementation
+
+end.

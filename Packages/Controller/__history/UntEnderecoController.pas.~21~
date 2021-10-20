@@ -1,0 +1,27 @@
+unit UntEnderecoController;
+
+interface
+
+uses
+  UntIEndereco;
+
+type
+  TEnderecoController = class
+    class function verificaCampos(Endereco: IEndereco): boolean;
+  end;
+
+implementation
+
+{ TEnderecoController }
+
+{ TEnderecoController }
+
+class function TEnderecoController.verificaCampos(Endereco: IEndereco): boolean;
+begin
+  result := true;
+
+  if (Endereco.getId = -1) then
+    result := false;
+end;
+
+end.
