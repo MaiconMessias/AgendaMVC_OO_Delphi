@@ -3,5 +3,5 @@
 ## Conteúdo
 - Sistema de contatos
 - Utilização do banco de dados PostgreSQL
-- Implementação de O.O. em Bpls (Packages), para implementar modelo MVC
+- Implementação de O.O. em Bpls, para implementar modelo MVC
 - OBS: Aplicação inacabada
