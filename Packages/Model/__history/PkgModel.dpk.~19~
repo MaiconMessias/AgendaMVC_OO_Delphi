@@ -1,0 +1,55 @@
+package PkgModel;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'PKG Model'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  dbrtl,
+  FireDAC,
+  FireDACCommonDriver,
+  FireDACCommon,
+  FireDACPgDriver,
+  vcl;
+
+contains
+  UntIPessoa in 'UntIPessoa.pas',
+  UntEndereco in 'UntEndereco.pas',
+  UntIEndereco in 'UntIEndereco.pas',
+  UntDtPrincipal in 'UntDtPrincipal.pas' {DataModule1: TDataModule},
+  UntUtil in 'UntUtil.pas',
+  UntEnderecoDAO in 'UntEnderecoDAO.pas',
+  UntPessoa in 'UntPessoa.pas',
+  UntPessoaDAO in 'UntPessoaDAO.pas',
+  UntITelefoneTipo in 'UntITelefoneTipo.pas',
+  UntTelefoneTipo in 'UntTelefoneTipo.pas',
+  UntTelefoneTipoDAO in 'UntTelefoneTipoDAO.pas',
+  UntITelefone in 'UntITelefone.pas';
+
+end.

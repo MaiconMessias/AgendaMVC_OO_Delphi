@@ -1,0 +1,49 @@
+unit UntTelefoneTipoDAO;
+
+interface
+
+uses
+  UntITelefoneTipo, UntDtPrincipal;
+
+type
+  TTelefoneTipoDAO = class
+    class function inserirAlterarPessoa(pId: integer;
+                                    pTelefoneTipo: ITelefoneTipo): boolean;
+  end;
+
+implementation
+
+{ TTelefoneTipoDAO }
+
+class function TTelefoneTipoDAO.inserirAlterarPessoa(pId: integer;
+                                         pTelefoneTipo: ITelefoneTipo): boolean;
+var
+  dtModule: TDataModule1;
+begin
+  dtModule := UntDtPrincipal.TDataModule1.Create(nil);
+  with dtModule do begin
+    FDConPrincipal.Connected := true;
+    if (pId = -1) then begin
+      with FDQTelefoneTipo do begin
+        SQL.Clear;
+        SQL.Text := 'INSERT INTO TELEFONE_TIPO (TIPO) VALUES (:TIPO)';
+        ParamByName('TIPO').AsString := pTelefoneTipo.getTipo();
+        ExecSQL;
+      end;
+      result := true;
+    end else begin
+      with FDQTelefoneTipo do begin
+        SQL.Clear;
+        SQL.Text := 'UPDATE TELEFONE_TIPO SET TIPO = :TIPO ' +
+                                                    'WHERE ID = :ID';
+        ParamByName('TIPO').AsString := pTelefoneTipo.getTipo();
+        ParamByName('ID').AsInteger := pId;
+        ExecSQL;
+        result := true;
+      end;
+    end;
+
+  end;
+end;
+
+end.

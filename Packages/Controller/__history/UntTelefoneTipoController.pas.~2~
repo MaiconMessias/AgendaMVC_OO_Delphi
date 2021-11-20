@@ -1,0 +1,37 @@
+unit UntTelefoneTipoController;
+
+interface
+
+uses
+  UntITelefoneTipo, FireDAC.Comp.Client, Vcl.StdCtrls;
+
+type
+  TTelefoneTipoController = class
+    class function inserirAlterarPessoa(pId: integer;
+                                    pTelefoneTipo: ITelefoneTipo): boolean;
+    class procedure pesquisar(FDQuery: TFDQuery; edtPesquisa: TEdit);
+  end;
+
+implementation
+
+{ TTelefoneTipoController }
+
+class function TTelefoneTipoController.inserirAlterarPessoa(pId: integer;
+                              pTelefoneTipo: ITelefoneTipo): boolean;
+var
+  vTelefoneTipo: TTelefoneTipoController;
+begin
+  vTelefoneTipo := TTelefoneTipoController.Create;
+  vTelefoneTipo.inserirAlterarPessoa(pId, pTelefoneTipo);
+end;
+
+class procedure TTelefoneTipoController.pesquisar(FDQuery: TFDQuery;
+                                                 edtPesquisa: TEdit);
+var
+  vTelefoneTipo: TTelefoneTipoController;
+begin
+  vTelefoneTipo := TTelefoneTipoController.Create;
+  vTelefoneTipo.pesquisar(FDQuery, edtPesquisa);
+end;
+
+end.

@@ -1,0 +1,17 @@
+unit UntTelefoneDAO;
+
+interface
+
+uses
+  UntDtPrincipal, FireDAC.Comp.Client, Vcl.StdCtrls, UntITelefone;
+
+type
+  TTelefoneDAO = class
+    class function inserirAlterarTelefone(pId: integer;
+                                    pTelefone: ITelefone): boolean;
+    class procedure pesquisar(FDQuery: TFDQuery; edtPesquisa: TEdit);
+  end;
+
+implementation
+
+end.

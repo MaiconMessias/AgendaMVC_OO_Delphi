@@ -1,0 +1,32 @@
+unit UntPessoaController;
+
+interface
+
+uses
+  UntIPessoa, UntPessoaDAO;
+
+type
+  TPessoaController = class
+    class function verificaCampos(pPessoa: IPessoa): boolean;
+    class function inserirAlterarEndereco(pId: integer; pPessoa: IPessoa): boolean;
+  end;
+
+implementation
+
+{ TPessoaController }
+
+class function TPessoaController.inserirAlterarEndereco(pId: integer;
+                                                   pPessoa: IPessoa): boolean;
+var
+  vPessoaDAO: TPessoaDAO;
+begin
+  TPessoaDAO.Create;
+  vPessoaDAO.inserirAlterarPessoa(pId, pPessoa);
+end;
+
+class function TPessoaController.verificaCampos(pPessoa: IPessoa): boolean;
+begin
+
+end;
+
+end.

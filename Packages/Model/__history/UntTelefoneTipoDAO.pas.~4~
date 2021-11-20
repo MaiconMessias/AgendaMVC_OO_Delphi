@@ -1,0 +1,53 @@
+unit UntTelefoneTipoDAO;
+
+interface
+
+uses
+  UntITelefoneTipo, UntDtPrincipal;
+
+type
+  TTelefoneTipoDAO = class
+    class function inserirAlterarPessoa(pId: integer;
+                                    pTelefoneTipo: ITelefoneTipo): boolean;
+  end;
+
+implementation
+
+{ TTelefoneTipoDAO }
+
+class function TTelefoneTipoDAO.inserirAlterarPessoa(pId: integer;
+  pPessoa: ITelefoneTipo): boolean;
+var
+  dtModule: TDataModule1;
+begin
+  dtModule := UntDtPrincipal.TDataModule1.Create(nil);
+  with dtModule do begin
+    FDConPrincipal.Connected := true;
+    if (pId = -1) then begin
+      with FDQTelefoneTipo do begin
+        SQL.Clear;
+        SQL.Text := 'INSERT INTO TELEFONE_TIPO (TIPO) VALUES (:TIPO)';
+        ParamByName('TIPO').AsString := pPessoa.getNome();
+        ParamByName('CPF').AsInteger := StrToInt(pPessoa.getCpf());
+        ParamByName('ENDERECO').AsInteger := pPessoa.getEndereco();
+        ExecSQL;
+      end;
+      result := true;
+    end else begin
+      with FDQPessoa do begin
+        SQL.Clear;
+        SQL.Text := 'UPDATE PESSOA SET NOME = :NOME, CPF = :CPF, ENDERECO = :ENDERECO ' +
+                                                    'WHERE ID = :ID';
+        ParamByName('NOME').AsString := pPessoa.getNome();
+        ParamByName('CPF').AsInteger := StrToInt(pPessoa.getCpf());
+        ParamByName('ENDERECO').AsInteger := pPessoa.getEndereco();
+        ParamByName('ID').AsInteger := pId;
+        ExecSQL;
+        result := true;
+      end;
+    end;
+
+  end;
+end;
+
+end.

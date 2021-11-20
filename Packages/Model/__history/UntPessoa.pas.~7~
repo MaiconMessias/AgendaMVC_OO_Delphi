@@ -1,0 +1,65 @@
+unit UntPessoa;
+
+interface
+
+uses UntIPessoa;
+
+type
+  TPessoa = class(TInterfacedObject, IPessoa)
+    FId: integer;
+    FNome: string;
+    FCpf: string;
+    FEndereco: integer;
+    // setters
+    procedure Nome(value: string);
+    procedure Cpf(value: string);
+    procedure Endereco(value: integer);
+    // getters
+    function getId(value: integer): integer;
+    function getNome(value: string): string;
+    function getCpf(value: string): string;
+    function getEndereco(value: integer): integer;
+  end;
+
+implementation
+
+
+
+{ TPessoa }
+
+procedure TPessoa.Cpf(value: string);
+begin
+
+end;
+
+procedure TPessoa.Endereco(value: integer);
+begin
+
+end;
+
+function TPessoa.getCpf(value: string): string;
+begin
+
+end;
+
+function TPessoa.getEndereco(value: integer): integer;
+begin
+
+end;
+
+function TPessoa.getId(value: integer): integer;
+begin
+
+end;
+
+function TPessoa.getNome(value: string): string;
+begin
+
+end;
+
+procedure TPessoa.Nome(value: string);
+begin
+
+end;
+
+end.

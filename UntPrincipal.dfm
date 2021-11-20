@@ -1,4 +1,4 @@
-object Form1: TForm1
+object FrmPrincipal: TFrmPrincipal
   Left = 0
   Top = 0
   BorderIcons = [biMinimize, biMaximize]
@@ -8,14 +8,15 @@ object Form1: TForm1
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -27
+  Font.Height = -16
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
+  Visible = True
   WindowState = wsMaximized
+  OnDestroy = FormDestroy
   OnShow = FormShow
   PixelsPerInch = 96
-  TextHeight = 33
+  TextHeight = 19
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -562,13 +563,19 @@ object Form1: TForm1
     Width = 614
     Height = 456
     Align = alClient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
     object PageCtrlLista: TPageControl
       Left = 1
       Top = 1
       Width = 612
       Height = 454
-      ActivePage = TabSEndereco
+      ActivePage = TabSTelefoneTipo
       Align = alClient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -577,36 +584,25 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      Visible = False
       object TabSPessoa: TTabSheet
         Caption = 'Pessoa'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -35
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         TabVisible = False
         OnHide = TabSPessoaHide
-        object DBGrid1: TDBGrid
-          Left = 0
-          Top = 48
-          Width = 604
-          Height = 350
-          Align = alClient
-          TabOrder = 0
-          TitleFont.Charset = DEFAULT_CHARSET
-          TitleFont.Color = clWindowText
-          TitleFont.Height = -11
-          TitleFont.Name = 'Tahoma'
-          TitleFont.Style = []
-        end
-        object DBNavigator1: TDBNavigator
+        object DBNavPessoa: TDBNavigator
           Left = 0
           Top = 398
           Width = 604
           Height = 46
+          DataSource = DtSrcPessoa
           Align = alBottom
-          TabOrder = 1
+          TabOrder = 0
         end
         object pnlHeader: TPanel
           Left = 0
@@ -619,7 +615,109 @@ object Form1: TForm1
           BorderStyle = bsSingle
           Color = clWhite
           ParentBackground = False
-          TabOrder = 2
+          TabOrder = 1
+          object SpeedButton1: TSpeedButton
+            Left = 1
+            Top = 1
+            Width = 112
+            Height = 42
+            Cursor = crHandPoint
+            Align = alLeft
+            Caption = 'Relat'#243'rio'
+            Flat = True
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            Glyph.Data = {
+              36080000424D3608000000000000360400002800000020000000200000000100
+              08000000000000040000C40E0000C40E00000001000000000000000000000000
+              80000080000000808000800000008000800080800000C0C0C000C0DCC000F0CA
+              A6000020400000206000002080000020A0000020C0000020E000004000000040
+              20000040400000406000004080000040A0000040C0000040E000006000000060
+              20000060400000606000006080000060A0000060C0000060E000008000000080
+              20000080400000806000008080000080A0000080C0000080E00000A0000000A0
+              200000A0400000A0600000A0800000A0A00000A0C00000A0E00000C0000000C0
+              200000C0400000C0600000C0800000C0A00000C0C00000C0E00000E0000000E0
+              200000E0400000E0600000E0800000E0A00000E0C00000E0E000400000004000
+              20004000400040006000400080004000A0004000C0004000E000402000004020
+              20004020400040206000402080004020A0004020C0004020E000404000004040
+              20004040400040406000404080004040A0004040C0004040E000406000004060
+              20004060400040606000406080004060A0004060C0004060E000408000004080
+              20004080400040806000408080004080A0004080C0004080E00040A0000040A0
+              200040A0400040A0600040A0800040A0A00040A0C00040A0E00040C0000040C0
+              200040C0400040C0600040C0800040C0A00040C0C00040C0E00040E0000040E0
+              200040E0400040E0600040E0800040E0A00040E0C00040E0E000800000008000
+              20008000400080006000800080008000A0008000C0008000E000802000008020
+              20008020400080206000802080008020A0008020C0008020E000804000008040
+              20008040400080406000804080008040A0008040C0008040E000806000008060
+              20008060400080606000806080008060A0008060C0008060E000808000008080
+              20008080400080806000808080008080A0008080C0008080E00080A0000080A0
+              200080A0400080A0600080A0800080A0A00080A0C00080A0E00080C0000080C0
+              200080C0400080C0600080C0800080C0A00080C0C00080C0E00080E0000080E0
+              200080E0400080E0600080E0800080E0A00080E0C00080E0E000C0000000C000
+              2000C0004000C0006000C0008000C000A000C000C000C000E000C0200000C020
+              2000C0204000C0206000C0208000C020A000C020C000C020E000C0400000C040
+              2000C0404000C0406000C0408000C040A000C040C000C040E000C0600000C060
+              2000C0604000C0606000C0608000C060A000C060C000C060E000C0800000C080
+              2000C0804000C0806000C0808000C080A000C080C000C080E000C0A00000C0A0
+              2000C0A04000C0A06000C0A08000C0A0A000C0A0C000C0A0E000C0C00000C0C0
+              2000C0C04000C0C06000C0C08000C0C0A000F0FBFF00A4A0A000808080000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFF6F6F6F6F6F6F6F6F6F6F6F6F6FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFF52000000000000000000000000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFF490052525252525252525252524900F7FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFF5200FFFFFFFFFFFFFFFFFFFFFFA400F7FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFF5200FFA40049494949494900F6A40007FFFFFFFFFFFFFFFFFFFFFFFFF65B
+              52520000FF52000000000000000007A400495252A4FFFFFFFFFFFFFFFF080000
+              00000000F6FFFFFFFFFFFFFFFFFFFFA4000000000000FFFFFFFFFFFFFF4900A4
+              F6F64900FF08A4A4A4A4A4A4A4A4FFA400F7F6F64900F7FFFFFFFFFFFF0000FF
+              FFFF5200FF000000000000000000F7A400F7FFFF0700A4FFFFFFFFFFFF0000FF
+              FFFF5200FFF6F7F7F7F7F7F7F7F7FFA400F7FFFFF700A4FFFFFFFFFFFF0000FF
+              FFFF5200FFFFFFFFFFFFFFFFFFFFFFA400F7FFFFF700A4FFFFFFFFFFFF0000FF
+              FFFF490000000000000000000000000000F7FFFFF700A4FFFFFFFFFFFF0000FF
+              FFFFA40000000000000000000000000000F6FFFFF700A4FFFFFFFFFFFF0000FF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700A4FFFFFFFFFFFF0000FF
+              FFF752FF5BA4FFFFFFFFFFFFFFFFFFFFFFFFFFFFF700A4FFFFFFFFFFFF0000FF
+              FF5200FF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFF700A4FFFFFFFFFFFF0000FF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700A4FFFFFFFFFFFF5B0049
+              A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4A4000008FFFFFFFFFFFFFF0000
+              000000000000000000000000000000000000000000A4FFFFFFFFFFFFFFFFFF07
+              F7074900A4A4A4A4A4A4A4A4A4A4F75200A407F7F6FFFFFFFFFFFFFFFFFFFFFF
+              FFFF5200FFFFFFFFFFFFFFFFFFFFFFA400F7FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFF5200F6FFFFFFFFFFFFFFFFFFFFA400F7FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFF5200F6FFFFFFFFFFFFFFFFFFFFA400F7FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFF5200FFFFFFFFFFFFFFFFFFFFFFA400F7FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFF490000000000000000000000000000F7FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFF9B000000000000000000000000000008FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+            ParentFont = False
+            OnClick = SpeedButton1Click
+          end
+          object Label1: TLabel
+            AlignWithMargins = True
+            Left = 284
+            Top = 4
+            Width = 48
+            Height = 36
+            Align = alRight
+            Caption = 'Nome:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            Layout = tlCenter
+            ExplicitLeft = 290
+            ExplicitHeight = 19
+          end
           object pnlPesquisa: TPanel
             Left = 335
             Top = 1
@@ -628,11 +726,10 @@ object Form1: TForm1
             Align = alRight
             BevelOuter = bvLowered
             BorderWidth = 1
-            Caption = 'pnlPesquisa'
             Color = clWhite
             ParentBackground = False
             TabOrder = 0
-            object SpeedButton5: TSpeedButton
+            object SBtnPesquisaPessoa: TSpeedButton
               Left = 213
               Top = 2
               Width = 49
@@ -739,11 +836,12 @@ object Form1: TForm1
                 FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFAFAF5959592222220505050202021717
                 17474747949494FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
                 FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+              OnClick = SBtnPesquisaPessoaClick
               ExplicitLeft = 350
               ExplicitTop = -1
               ExplicitHeight = 46
             end
-            object edtPesquisa: TEdit
+            object edtPesquisaPessoa: TEdit
               Left = 2
               Top = 2
               Width = 211
@@ -760,6 +858,70 @@ object Form1: TForm1
             end
           end
         end
+        object DBGPessoa: TDBGrid
+          Left = 0
+          Top = 48
+          Width = 604
+          Height = 350
+          Align = alClient
+          DataSource = DtSrcPessoa
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 2
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Tahoma'
+          TitleFont.Style = []
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'id'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -16
+              Title.Font.Name = 'Tahoma'
+              Title.Font.Style = []
+              Width = 45
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'nome'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -16
+              Title.Font.Name = 'Tahoma'
+              Title.Font.Style = []
+              Width = 300
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'cpf'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -16
+              Title.Font.Name = 'Tahoma'
+              Title.Font.Style = []
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'endereco'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -16
+              Title.Font.Name = 'Tahoma'
+              Title.Font.Style = []
+              Visible = False
+            end>
+        end
       end
       object TabSEndereco: TTabSheet
         Caption = 'Endere'#231'o'
@@ -773,6 +935,12 @@ object Form1: TForm1
           Height = 350
           Align = alClient
           DataSource = DtSrcEndereco
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
           ReadOnly = True
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
@@ -780,6 +948,42 @@ object Form1: TForm1
           TitleFont.Height = -16
           TitleFont.Name = 'Tahoma'
           TitleFont.Style = []
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'id'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'logradouro'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'numero'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'cep'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'bairro'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'cidade'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'estado'
+              Visible = True
+            end>
         end
         object DBNavEndereco: TDBNavigator
           Left = 0
@@ -789,145 +993,6 @@ object Form1: TForm1
           DataSource = DtSrcEndereco
           Align = alBottom
           TabOrder = 1
-        end
-        object Panel4: TPanel
-          Left = 360
-          Top = 0
-          Width = 240
-          Height = 48
-          BevelOuter = bvNone
-          BorderWidth = 1
-          BorderStyle = bsSingle
-          Caption = 'pnlPesquisa'
-          Color = clWhite
-          ParentBackground = False
-          TabOrder = 2
-          object SpeedButton7: TSpeedButton
-            Left = 186
-            Top = 1
-            Width = 49
-            Height = 42
-            Cursor = crHandPoint
-            Align = alRight
-            Flat = True
-            Glyph.Data = {
-              360C0000424D360C000000000000360000002800000020000000200000000100
-              180000000000000C0000C40E0000C40E00000000000000000000FFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFF3F3F3F0000001E1E1ECCCCCCFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFF000000000000000000000000000000AEAEAEFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB
-              FBFB000000000000000000666666000000000000000000CCCCCCFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFB00
-              0000000000000000878787FFFFFFE3E3E30000000000001F1F1FFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFB00000000
-              0000000000878787FFFFFFFFFFFFFFFFFF676767000000000000FFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFB00000000000000
-              0000878787FFFFFFFFFFFFFFFFFF878787000000000000404040FFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000000087
-              8787FFFFFFFFFFFFFFFFFF878787000000000000000000FFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4E4E4E000000000000878787FF
-              FFFFFFFFFFFFFFFF878787000000000000000000FBFBFBFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF181818000000282828FFFFFFFF
-              FFFFFFFFFF878787000000000000000000FBFBFBFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0F0F0CDCDCDC8C8C8E1E1
-              E1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF606060000000000000696969FF
-              FFFF878787000000000000000000FBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFD1D1D14949490000000000000000000000000000
-              000000002A2A2AA6A6A6FFFFFFFFFFFFFFFFFFC1C1C100000000000000000028
-              2828000000000000000000FBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFF2A2A2A0000000000000000000000000000000000000000
-              00000000000000000000000000DADADAD4D4D400000000000000000000000000
-              0000000000000000FBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFD9D9D9000000000000000000000000515151A4A4A4CECECED3D3D3B4B4
-              B46D6D6D000000000000000000000000000000000000000000C0C0C060606019
-              19194D4D4DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              E0E0E00000000000000000005E5E5EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFF9B9B9B000000000000000000000000D4D4D4FFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              000000000000000000BABABAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFBFBFB000000000000000000DADADAFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF555555
-              000000000000A9A9A9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFB000000000000000000FFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000
-              0000003A3A3AFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9B9B9B000000000000A6A6A6FFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF939393000000
-              000000EAEAEAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000002A2A2AFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF474747000000
-              101010FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6D6D6D000000000000FFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF181818000000
-              5C5C5CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB4B4B4000000000000E1E1E1FF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF020202000000
-              7B7B7BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3D3D3000000000000C8C8C8FF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF060606000000
-              767676FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCECECE000000000000CECECEFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF222222000000
-              4C4C4CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA4A4A4000000000000F0F0F0FF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF595959000000
-              000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF515151000000000000FFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFAFAF000000
-              000000C1C1C1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000494949FFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000
-              000000090909FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D5D5D000000000000D2D2D2FFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8C8C8C
-              000000000000545454FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFBABABA0000000000002A2A2AFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              191919000000000000545454FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFA9A9A9000000000000000000FFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFF000000000000000000090909C1C1C1FFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFEAEAEA3A3A3A000000000000000000D9D9D9FFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFF1D1D1D0000000000000000000000004C4C4C7676767C7C7C5C5C
-              5C101010000000000000000000000000E0E0E0FFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFF8C8C8C0000000000000000000000000000000000000000
-              00000000000000000000555555FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFAFAF5959592222220505050202021717
-              17474747949494FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
-            ExplicitLeft = 350
-            ExplicitTop = -1
-            ExplicitHeight = 46
-          end
-          object Edit1: TEdit
-            Left = 1
-            Top = 1
-            Width = 185
-            Height = 42
-            Align = alClient
-            BorderStyle = bsNone
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Height = -27
-            Font.Name = 'Tahoma'
-            Font.Style = []
-            ParentFont = False
-            TabOrder = 0
-          end
         end
         object Panel5: TPanel
           Left = 0
@@ -940,7 +1005,25 @@ object Form1: TForm1
           BorderStyle = bsSingle
           Color = clWhite
           ParentBackground = False
-          TabOrder = 3
+          TabOrder = 2
+          object Label2: TLabel
+            AlignWithMargins = True
+            Left = 244
+            Top = 4
+            Width = 88
+            Height = 36
+            Align = alRight
+            Caption = 'Logradouro:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            Layout = tlCenter
+            ExplicitLeft = 253
+            ExplicitHeight = 19
+          end
           object Panel6: TPanel
             Left = 335
             Top = 1
@@ -953,7 +1036,7 @@ object Form1: TForm1
             Color = clWhite
             ParentBackground = False
             TabOrder = 0
-            object sbPesquisar: TSpeedButton
+            object sbPesquisaEndereco: TSpeedButton
               Left = 213
               Top = 2
               Width = 49
@@ -1060,12 +1143,12 @@ object Form1: TForm1
                 FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFAFAF5959592222220505050202021717
                 17474747949494FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
                 FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
-              OnClick = sbPesquisarClick
+              OnClick = sbPesquisaEnderecoClick
               ExplicitLeft = 350
               ExplicitTop = -1
               ExplicitHeight = 46
             end
-            object edtPesquisar: TEdit
+            object edtPesquisaEndereco: TEdit
               Left = 2
               Top = 2
               Width = 211
@@ -1084,129 +1167,18 @@ object Form1: TForm1
           end
         end
       end
-      object TabSheet3: TTabSheet
-        Caption = 'TabSContato'
+      object TabSTelefone: TTabSheet
+        Caption = 'Telefone'
         ImageIndex = 2
         TabVisible = False
-      end
-      object TabSheet4: TTabSheet
-        Caption = 'TabSTipoContato'
-        ImageIndex = 3
-        TabVisible = False
-      end
-    end
-    object PgCtrlCad: TPageControl
-      Left = 1
-      Top = 1
-      Width = 612
-      Height = 454
-      ActivePage = TabSCadEndereco
-      Align = alClient
-      TabOrder = 1
-      Visible = False
-      ExplicitTop = 125
-      ExplicitWidth = 440
-      ExplicitHeight = 330
-      object TabSCadEndereco: TTabSheet
-        Caption = 'TabSCadEndereco'
-        TabVisible = False
-        object Label2: TLabel
-          Left = 58
-          Top = 81
-          Width = 23
-          Height = 19
-          Caption = 'Id:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object Label3: TLabel
-          Left = 151
-          Top = 81
-          Width = 99
-          Height = 19
-          Caption = 'Logradouro:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object Label4: TLabel
-          Left = 13
-          Top = 119
-          Width = 70
-          Height = 19
-          Caption = 'N'#250'mero:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object Label5: TLabel
-          Left = 212
-          Top = 118
-          Width = 38
-          Height = 19
-          Caption = 'CEP:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object Label6: TLabel
-          Left = 27
-          Top = 157
-          Width = 56
-          Height = 19
-          Caption = 'Bairro:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object Label7: TLabel
-          Left = 361
-          Top = 157
-          Width = 61
-          Height = 19
-          Caption = 'Estado:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object Label8: TLabel
-          Left = 21
-          Top = 196
-          Width = 62
-          Height = 19
-          Caption = 'Cidade:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object edtIdPessoa: TEdit
-          Left = 90
-          Top = 78
-          Width = 47
-          Height = 27
-          Enabled = False
+        OnHide = TabSTelefoneHide
+        object DBGtelefone: TDBGrid
+          Left = 0
+          Top = 48
+          Width = 604
+          Height = 350
+          Align = alClient
+          DataSource = DtSrcTelefone
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -16
@@ -1215,150 +1187,463 @@ object Form1: TForm1
           ParentFont = False
           ReadOnly = True
           TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Tahoma'
+          TitleFont.Style = []
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'id'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -16
+              Title.Font.Name = 'Tahoma'
+              Title.Font.Style = []
+              Width = 50
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'numero'
+              Title.Caption = 'N'#250'mero'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -16
+              Title.Font.Name = 'Tahoma'
+              Title.Font.Style = []
+              Width = 150
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'ddd'
+              Title.Caption = 'DDD'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -16
+              Title.Font.Name = 'Tahoma'
+              Title.Font.Style = []
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'tipo'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -16
+              Title.Font.Name = 'Tahoma'
+              Title.Font.Style = []
+              Visible = False
+            end>
         end
-        object edtLogradouro: TEdit
-          Left = 256
-          Top = 78
-          Width = 261
-          Height = 27
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Tahoma'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 1
-        end
-        object edtNumeroEnde: TEdit
-          Left = 89
-          Top = 116
-          Width = 101
-          Height = 27
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Tahoma'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 2
-        end
-        object edtCepEnde: TEdit
-          Left = 256
-          Top = 115
-          Width = 101
-          Height = 27
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Tahoma'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 3
-        end
-        object edtBairroEnde: TEdit
-          Left = 89
-          Top = 154
-          Width = 261
-          Height = 27
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Tahoma'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 4
-        end
-        object edtEstadoEnde: TEdit
-          Left = 428
-          Top = 154
-          Width = 173
-          Height = 27
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Tahoma'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 5
-        end
-        object edtCidadeEnde: TEdit
-          Left = 89
-          Top = 193
-          Width = 261
-          Height = 27
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Tahoma'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 6
-        end
-        object pnlHederCadEnde: TPanel
+        object pnlHeaderTelefone: TPanel
           Left = 0
           Top = 0
           Width = 604
-          Height = 72
+          Height = 48
           Align = alTop
           BevelOuter = bvNone
-          TabOrder = 7
-          object Label1: TLabel
-            Left = 0
-            Top = 0
-            Width = 604
-            Height = 72
-            Align = alClient
-            Alignment = taCenter
-            Caption = 'Cadastro de Endere'#231'o'
+          BorderWidth = 1
+          BorderStyle = bsSingle
+          Color = clWhite
+          ParentBackground = False
+          TabOrder = 1
+          object Label3: TLabel
+            AlignWithMargins = True
+            Left = 269
+            Top = 4
+            Width = 63
+            Height = 36
+            Align = alRight
+            Caption = 'N'#250'mero:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -27
-            Font.Name = 'Times New Roman'
-            Font.Style = [fsBold]
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
             ParentFont = False
-            ExplicitWidth = 260
-            ExplicitHeight = 31
+            Layout = tlCenter
+            ExplicitLeft = 278
+            ExplicitHeight = 19
+          end
+          object Panel8: TPanel
+            Left = 335
+            Top = 1
+            Width = 264
+            Height = 42
+            Align = alRight
+            BevelOuter = bvLowered
+            BorderWidth = 1
+            Color = clWhite
+            ParentBackground = False
+            TabOrder = 0
+            object sbtnPesquisaTelefone: TSpeedButton
+              Left = 213
+              Top = 2
+              Width = 49
+              Height = 38
+              Cursor = crHandPoint
+              Align = alRight
+              Flat = True
+              Glyph.Data = {
+                360C0000424D360C000000000000360000002800000020000000200000000100
+                180000000000000C0000C40E0000C40E00000000000000000000FFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFF3F3F3F0000001E1E1ECCCCCCFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFF000000000000000000000000000000AEAEAEFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB
+                FBFB000000000000000000666666000000000000000000CCCCCCFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFB00
+                0000000000000000878787FFFFFFE3E3E30000000000001F1F1FFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFB00000000
+                0000000000878787FFFFFFFFFFFFFFFFFF676767000000000000FFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFB00000000000000
+                0000878787FFFFFFFFFFFFFFFFFF878787000000000000404040FFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000000087
+                8787FFFFFFFFFFFFFFFFFF878787000000000000000000FFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4E4E4E000000000000878787FF
+                FFFFFFFFFFFFFFFF878787000000000000000000FBFBFBFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF181818000000282828FFFFFFFF
+                FFFFFFFFFF878787000000000000000000FBFBFBFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0F0F0CDCDCDC8C8C8E1E1
+                E1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF606060000000000000696969FF
+                FFFF878787000000000000000000FBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFD1D1D14949490000000000000000000000000000
+                000000002A2A2AA6A6A6FFFFFFFFFFFFFFFFFFC1C1C100000000000000000028
+                2828000000000000000000FBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFF2A2A2A0000000000000000000000000000000000000000
+                00000000000000000000000000DADADAD4D4D400000000000000000000000000
+                0000000000000000FBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFD9D9D9000000000000000000000000515151A4A4A4CECECED3D3D3B4B4
+                B46D6D6D000000000000000000000000000000000000000000C0C0C060606019
+                19194D4D4DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                E0E0E00000000000000000005E5E5EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFF9B9B9B000000000000000000000000D4D4D4FFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                000000000000000000BABABAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFBFBFB000000000000000000DADADAFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF555555
+                000000000000A9A9A9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFB000000000000000000FFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000
+                0000003A3A3AFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9B9B9B000000000000A6A6A6FFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF939393000000
+                000000EAEAEAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000002A2A2AFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF474747000000
+                101010FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6D6D6D000000000000FFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF181818000000
+                5C5C5CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB4B4B4000000000000E1E1E1FF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF020202000000
+                7B7B7BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3D3D3000000000000C8C8C8FF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF060606000000
+                767676FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCECECE000000000000CECECEFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF222222000000
+                4C4C4CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA4A4A4000000000000F0F0F0FF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF595959000000
+                000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF515151000000000000FFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFAFAF000000
+                000000C1C1C1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000494949FFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000
+                000000090909FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D5D5D000000000000D2D2D2FFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8C8C8C
+                000000000000545454FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFBABABA0000000000002A2A2AFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                191919000000000000545454FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFA9A9A9000000000000000000FFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFF000000000000000000090909C1C1C1FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFEAEAEA3A3A3A000000000000000000D9D9D9FFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF1D1D1D0000000000000000000000004C4C4C7676767C7C7C5C5C
+                5C101010000000000000000000000000E0E0E0FFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFF8C8C8C0000000000000000000000000000000000000000
+                00000000000000000000555555FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFAFAF5959592222220505050202021717
+                17474747949494FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+              OnClick = sbtnPesquisaTelefoneTipoClick
+              ExplicitLeft = 350
+              ExplicitTop = -1
+              ExplicitHeight = 46
+            end
+            object edtPesquisaTelefone: TEdit
+              Left = 2
+              Top = 2
+              Width = 211
+              Height = 38
+              Align = alClient
+              BorderStyle = bsNone
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -27
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 0
+            end
           end
         end
-        object pnlBotoesCadEnde: TPanel
+        object DBNavTelefone: TDBNavigator
           Left = 0
-          Top = 403
+          Top = 398
           Width = 604
-          Height = 41
+          Height = 46
+          DataSource = DtSrcTelefone
           Align = alBottom
-          TabOrder = 8
-          object btnCancelarEnde: TButton
-            Left = 304
-            Top = 1
-            Width = 299
-            Height = 39
-            Align = alLeft
-            Caption = 'Cancelar'
+          TabOrder = 2
+        end
+      end
+      object TabSTelefoneTipo: TTabSheet
+        Caption = 'TipoContato'
+        ImageIndex = 3
+        TabVisible = False
+        OnHide = TabSTelefoneTipoHide
+        object DBNavTelefoneTipo: TDBNavigator
+          Left = 0
+          Top = 398
+          Width = 604
+          Height = 46
+          DataSource = DtSrcTelefoneTipo
+          Align = alBottom
+          TabOrder = 0
+        end
+        object PnlHeaderTelefoneTipo: TPanel
+          Left = 0
+          Top = 0
+          Width = 604
+          Height = 48
+          Align = alTop
+          BevelOuter = bvNone
+          BorderWidth = 1
+          BorderStyle = bsSingle
+          Color = clWhite
+          ParentBackground = False
+          TabOrder = 1
+          object Label4: TLabel
+            AlignWithMargins = True
+            Left = 294
+            Top = 4
+            Width = 38
+            Height = 36
+            Align = alRight
+            Caption = 'Tipo:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -16
             Font.Name = 'Tahoma'
             Font.Style = []
             ParentFont = False
+            Layout = tlCenter
+            ExplicitLeft = 288
+            ExplicitHeight = 19
+          end
+          object Panel7: TPanel
+            Left = 335
+            Top = 1
+            Width = 264
+            Height = 42
+            Align = alRight
+            BevelOuter = bvLowered
+            BorderWidth = 1
+            Color = clWhite
+            ParentBackground = False
             TabOrder = 0
-            OnClick = btnCancelarEndeClick
+            object sbtnPesquisaTelefoneTipo: TSpeedButton
+              Left = 213
+              Top = 2
+              Width = 49
+              Height = 38
+              Cursor = crHandPoint
+              Align = alRight
+              Flat = True
+              Glyph.Data = {
+                360C0000424D360C000000000000360000002800000020000000200000000100
+                180000000000000C0000C40E0000C40E00000000000000000000FFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFF3F3F3F0000001E1E1ECCCCCCFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFF000000000000000000000000000000AEAEAEFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB
+                FBFB000000000000000000666666000000000000000000CCCCCCFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFB00
+                0000000000000000878787FFFFFFE3E3E30000000000001F1F1FFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFB00000000
+                0000000000878787FFFFFFFFFFFFFFFFFF676767000000000000FFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFB00000000000000
+                0000878787FFFFFFFFFFFFFFFFFF878787000000000000404040FFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000000087
+                8787FFFFFFFFFFFFFFFFFF878787000000000000000000FFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4E4E4E000000000000878787FF
+                FFFFFFFFFFFFFFFF878787000000000000000000FBFBFBFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF181818000000282828FFFFFFFF
+                FFFFFFFFFF878787000000000000000000FBFBFBFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0F0F0CDCDCDC8C8C8E1E1
+                E1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF606060000000000000696969FF
+                FFFF878787000000000000000000FBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFD1D1D14949490000000000000000000000000000
+                000000002A2A2AA6A6A6FFFFFFFFFFFFFFFFFFC1C1C100000000000000000028
+                2828000000000000000000FBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFF2A2A2A0000000000000000000000000000000000000000
+                00000000000000000000000000DADADAD4D4D400000000000000000000000000
+                0000000000000000FBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFD9D9D9000000000000000000000000515151A4A4A4CECECED3D3D3B4B4
+                B46D6D6D000000000000000000000000000000000000000000C0C0C060606019
+                19194D4D4DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                E0E0E00000000000000000005E5E5EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFF9B9B9B000000000000000000000000D4D4D4FFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                000000000000000000BABABAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFBFBFB000000000000000000DADADAFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF555555
+                000000000000A9A9A9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFB000000000000000000FFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000
+                0000003A3A3AFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9B9B9B000000000000A6A6A6FFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF939393000000
+                000000EAEAEAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000002A2A2AFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF474747000000
+                101010FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6D6D6D000000000000FFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF181818000000
+                5C5C5CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB4B4B4000000000000E1E1E1FF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF020202000000
+                7B7B7BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3D3D3000000000000C8C8C8FF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF060606000000
+                767676FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCECECE000000000000CECECEFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF222222000000
+                4C4C4CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA4A4A4000000000000F0F0F0FF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF595959000000
+                000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF515151000000000000FFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFAFAF000000
+                000000C1C1C1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000494949FFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000
+                000000090909FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D5D5D000000000000D2D2D2FFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8C8C8C
+                000000000000545454FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFBABABA0000000000002A2A2AFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                191919000000000000545454FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFA9A9A9000000000000000000FFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFF000000000000000000090909C1C1C1FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFEAEAEA3A3A3A000000000000000000D9D9D9FFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF1D1D1D0000000000000000000000004C4C4C7676767C7C7C5C5C
+                5C101010000000000000000000000000E0E0E0FFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFF8C8C8C0000000000000000000000000000000000000000
+                00000000000000000000555555FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFAFAF5959592222220505050202021717
+                17474747949494FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+              OnClick = sbtnPesquisaTelefoneTipoClick
+              ExplicitLeft = 350
+              ExplicitTop = -1
+              ExplicitHeight = 46
+            end
+            object edtPesquisaTelefoneTipo: TEdit
+              Left = 2
+              Top = 2
+              Width = 211
+              Height = 38
+              Align = alClient
+              BorderStyle = bsNone
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -27
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 0
+            end
           end
-          object btnSalvarEnde: TButton
-            Left = 1
-            Top = 1
-            Width = 303
-            Height = 39
-            Align = alLeft
-            Caption = 'Salvar'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -16
-            Font.Name = 'Tahoma'
-            Font.Style = []
-            ParentFont = False
-            TabOrder = 1
-            OnClick = btnSalvarEndeClick
-          end
+        end
+        object DBGTelefoneTipo: TDBGrid
+          Left = 0
+          Top = 48
+          Width = 604
+          Height = 350
+          Align = alClient
+          DataSource = DtSrcTelefoneTipo
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 2
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Tahoma'
+          TitleFont.Style = []
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'id'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -16
+              Title.Font.Name = 'Tahoma'
+              Title.Font.Style = []
+              Width = 60
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'tipo'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -16
+              Title.Font.Name = 'Tahoma'
+              Title.Font.Style = []
+              Visible = True
+            end>
         end
       end
     end
@@ -1372,7 +1657,7 @@ object Form1: TForm1
     Color = cl3DLight
     ParentBackground = False
     TabOrder = 2
-    object SpeedButton1: TSpeedButton
+    object SBtnSair: TSpeedButton
       AlignWithMargins = True
       Left = 1
       Top = 302
@@ -1494,10 +1779,10 @@ object Form1: TForm1
       Margin = 10
       ParentFont = False
       Spacing = 10
-      OnClick = SpeedButton1Click
+      OnClick = SBtnSairClick
       ExplicitTop = 277
     end
-    object sbListaContato: TSpeedButton
+    object sbListaTelefone: TSpeedButton
       AlignWithMargins = True
       Left = 1
       Top = 182
@@ -1619,7 +1904,7 @@ object Form1: TForm1
       Margin = 10
       ParentFont = False
       Spacing = 10
-      OnClick = sbListaContatoClick
+      OnClick = sbListaTelefoneClick
       ExplicitTop = 167
     end
     object sbListaEndereco: TSpeedButton
@@ -2138,7 +2423,7 @@ object Form1: TForm1
     Connection = DtModPrincipal.FDConnPrincipal
     SQL.Strings = (
       'SELECT * FROM ENDERECO ORDER BY ID ASC')
-    Left = 497
+    Left = 479
     Top = 16
     object FDQEnderecoid: TIntegerField
       DisplayLabel = 'ID'
@@ -2166,6 +2451,7 @@ object Form1: TForm1
       DisplayLabel = 'CEP'
       FieldName = 'cep'
       Origin = 'cep'
+      DisplayFormat = '#####-##'
       Precision = 10
       Size = 0
     end
@@ -2194,5 +2480,108 @@ object Form1: TForm1
     DataSet = FDQEndereco
     Left = 585
     Top = 16
+  end
+  object FDQPessoa: TFDQuery
+    BeforeInsert = FDQPessoaBeforeInsert
+    BeforeEdit = FDQPessoaBeforeEdit
+    Connection = DtModPrincipal.FDConnPrincipal
+    SQL.Strings = (
+      'SELECT * FROM PESSOA ORDER BY ID ASC')
+    Left = 479
+    Top = 81
+    object FDQPessoaid: TIntegerField
+      DisplayLabel = 'ID'
+      DisplayWidth = 5
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object FDQPessoanome: TWideStringField
+      DisplayLabel = 'Nome'
+      DisplayWidth = 50
+      FieldName = 'nome'
+      Origin = 'nome'
+      Size = 256
+    end
+    object FDQPessoacpf: TLargeintField
+      DisplayLabel = 'CPF'
+      FieldName = 'cpf'
+      Origin = 'cpf'
+    end
+    object FDQPessoaendereco: TIntegerField
+      DisplayLabel = 'Endere'#231'o'
+      FieldName = 'endereco'
+      Origin = 'endereco'
+    end
+  end
+  object DtSrcPessoa: TDataSource
+    DataSet = FDQPessoa
+    Left = 582
+    Top = 80
+  end
+  object FDQTelefoneTipo: TFDQuery
+    BeforeInsert = FDQTelefoneTipoBeforeInsert
+    BeforeEdit = FDQTelefoneTipoBeforeEdit
+    Connection = DtModPrincipal.FDConnPrincipal
+    SQL.Strings = (
+      'SELECT * FROM TELEFONE_TIPO')
+    Left = 484
+    Top = 144
+    object FDQTelefoneTipoid: TIntegerField
+      DisplayLabel = 'ID'
+      DisplayWidth = 7
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object FDQTelefoneTipotipo: TWideStringField
+      DisplayLabel = 'Tipo'
+      DisplayWidth = 45
+      FieldName = 'tipo'
+      Origin = 'tipo'
+      Size = 100
+    end
+  end
+  object DtSrcTelefoneTipo: TDataSource
+    DataSet = FDQTelefoneTipo
+    Left = 582
+    Top = 144
+  end
+  object FDQTelefone: TFDQuery
+    BeforeInsert = FDQTelefoneBeforeInsert
+    BeforeEdit = FDQTelefoneBeforeEdit
+    Connection = DtModPrincipal.FDConnPrincipal
+    SQL.Strings = (
+      'SELECT * FROM TELEFONE')
+    Left = 478
+    Top = 216
+    object FDQTelefoneid: TIntegerField
+      DisplayLabel = 'ID'
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object FDQTelefonenumero: TBCDField
+      FieldName = 'numero'
+      Origin = 'numero'
+      DisplayFormat = '(##) #####-####'
+      Precision = 6
+      Size = 0
+    end
+    object FDQTelefoneddd: TBCDField
+      FieldName = 'ddd'
+      Origin = 'ddd'
+      Precision = 4
+      Size = 0
+    end
+    object FDQTelefonetipo2: TIntegerField
+      FieldName = 'tipo'
+      Origin = 'tipo'
+    end
+  end
+  object DtSrcTelefone: TDataSource
+    DataSet = FDQTelefone
+    Left = 590
+    Top = 216
   end
 end

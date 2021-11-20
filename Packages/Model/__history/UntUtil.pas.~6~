@@ -1,0 +1,21 @@
+unit UntUtil;
+
+interface
+
+type
+  TUtil = class
+    class function verificaCampos(): boolean;
+  end;
+
+implementation
+
+{ TUtil }
+
+uses UntDtPrincipal;
+
+class function verificaCampos(): boolean;
+begin
+//
+end;
+
+end.

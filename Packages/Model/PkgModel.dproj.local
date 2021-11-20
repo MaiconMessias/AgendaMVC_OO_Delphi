@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/10/18 09:26:53.000.180,=rtl.dcp</Transaction>
+    <Transaction>2021/10/18 14:40:16.000.619,=rtl.dcp</Transaction>
+    <Transaction>2021/10/18 14:40:41.000.649,C:\Users\windows10\Documents\Embarcadero\Studio\Projects\Package1.dproj=C:\Users\windows10\Documents\Embarcadero\Studio\Projects\PkgModel.dproj</Transaction>
+    <Transaction>2021/10/18 14:40:51.000.383,=C:\Users\windows10\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/10/18 14:42:40.000.725,C:\Users\windows10\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntPessoa.pas</Transaction>
+    <Transaction>2021/10/18 14:42:51.000.615,C:\Users\windows10\Documents\Embarcadero\Studio\Projects\PkgModel.dproj=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\PkgModel.dproj</Transaction>
+    <Transaction>2021/10/18 18:09:21.000.311,=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/18 18:10:21.000.981,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntIPessoa.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/18 18:19:12.000.232,=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/18 18:22:10.000.385,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntEndereco.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/18 18:27:45.000.669,=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/18 18:31:13.000.929,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntIEndereco.pas</Transaction>
+    <Transaction>2021/10/18 19:58:08.000.500,=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/18 19:58:34.000.140,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.dfm=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntDtPrincipal.dfm</Transaction>
+    <Transaction>2021/10/18 19:58:34.000.140,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntDtPrincipal.pas</Transaction>
+    <Transaction>2021/10/18 21:26:53.000.881,=FireDAC.dcp</Transaction>
+    <Transaction>2021/10/18 21:26:53.000.874,=dbrtl.dcp</Transaction>
+    <Transaction>2021/10/18 21:26:53.000.889,=FireDACCommonDriver.dcp</Transaction>
+    <Transaction>2021/10/18 21:26:53.000.893,=FireDACCommon.dcp</Transaction>
+    <Transaction>2021/10/18 21:26:53.000.897,=FireDACPgDriver.dcp</Transaction>
+    <Transaction>2021/10/18 23:55:19.000.135,=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/18 23:56:39.000.749,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntUtil.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/19 15:41:56.000.825,=vcl.dcp</Transaction>
+    <Transaction>2021/10/19 17:56:19.000.269,=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/19 17:56:40.000.049,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntEnderecoDAO.pas</Transaction>
+    <Transaction>2021/10/30 11:41:05.000.071,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntPessoa.pas=</Transaction>
+    <Transaction>2021/10/30 12:11:39.000.490,=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/30 12:12:04.000.755,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntPessoa.pas</Transaction>
+    <Transaction>2021/10/30 12:27:14.000.955,=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/30 12:27:53.000.033,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntPessoaDAO.pas</Transaction>
+    <Transaction>2021/10/31 22:54:46.000.831,=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/31 22:55:07.000.756,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntTelefoneTipo.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/31 22:57:44.000.719,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntITelefoneTipo.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntTelefoneTipo.pas</Transaction>
+    <Transaction>2021/10/31 23:02:14.000.843,=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/31 23:02:35.000.854,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntTelefoneTipo.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/31 23:07:08.000.680,=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/10/31 23:07:42.000.368,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntTelefoneTipoDAO.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/11/01 13:32:40.000.667,=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/11/01 13:33:05.000.010,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntITelefone.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/11/01 13:36:57.000.928,=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/11/01 13:37:21.000.412,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntTelefone.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/11/01 13:44:50.000.448,=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+    <Transaction>2021/11/01 13:45:07.000.135,C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\UntTelefoneDAO.pas=C:\Users\windows10\Desktop\Projetos Delphi XE 11\Agenda\Packages\Model\Unit1.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="UntDtPrincipal.pas"/>
+    <File Path="UntDtPrincipal.dfm"/>
+    <File Path="UntEndereco.pas"/>
+    <File Path="UntEnderecoDAO.pas"/>
+    <File Path="UntIEndereco.pas"/>
+    <File Path="UntIPessoa.pas"/>
+    <File Path="UntITelefone.pas"/>
+    <File Path="UntITelefoneTipo.pas"/>
+    <File Path="UntPessoa.pas"/>
+    <File Path="UntPessoaDAO.pas"/>
+    <File Path="UntTelefone.pas"/>
+    <File Path="UntTelefoneDAO.pas"/>
+    <File Path="UntTelefoneTipo.pas"/>
+    <File Path="UntTelefoneTipoDAO.pas"/>
+    <File Path="UntUtil.pas"/>
+    <File Path="dbrtl.dcp"/>
+    <File Path="FireDAC.dcp"/>
+    <File Path="FireDACCommon.dcp"/>
+    <File Path="FireDACCommonDriver.dcp"/>
+    <File Path="FireDACPgDriver.dcp"/>
+    <File Path="rtl.dcp"/>
+    <File Path="vcl.dcp"/>
+  </ProjectSortOrder>
+</BorlandProject>

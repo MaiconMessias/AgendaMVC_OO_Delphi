@@ -1,0 +1,27 @@
+unit UntUtil;
+
+interface
+
+uses
+  UntEndereco, UntIEndereco;
+
+type
+  TUtil = class
+    class function verificaCampos(Endereco: IEndereco): boolean;
+  end;
+
+implementation
+
+{ TUtil }
+
+class function TUtil.verificaCampos(Endereco: IEndereco): boolean;
+begin
+  result := true;
+
+  if (Endereco.getId = -1) then
+    result := false;
+
+
+end;
+
+end.

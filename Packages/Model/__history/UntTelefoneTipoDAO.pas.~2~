@@ -1,0 +1,12 @@
+unit UntTelefoneTipoDAO;
+
+interface
+
+type
+  TTelefoneTipoDAO = class
+
+  end;
+
+implementation
+
+end.

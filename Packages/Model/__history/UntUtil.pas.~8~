@@ -1,0 +1,30 @@
+unit UntUtil;
+
+interface
+
+uses
+  UntIEndereco;
+
+type
+  TUtil = class
+    class function verificaCampos(Endereco: IEndereco): boolean;
+  end;
+
+implementation
+
+{ TUtil }
+
+uses UntDtPrincipal;
+
+{ TUtil }
+
+class function TUtil.verificaCampos(Endereco: IEndereco): boolean;
+begin
+  result := true;
+
+  if (Endereco.Logradouro() = "") then
+
+
+end;
+
+end.

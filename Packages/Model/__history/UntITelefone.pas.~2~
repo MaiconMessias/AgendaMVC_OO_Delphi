@@ -1,0 +1,13 @@
+unit UntITelefone;
+
+interface
+
+type
+  ITelefone = interface
+    ['{DE5738BE-0D0E-486B-A722-C6ED97759F28}']
+
+  end;
+
+implementation
+
+end.

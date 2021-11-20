@@ -1,0 +1,12 @@
+unit UntTelefone;
+
+interface
+
+type
+  TTelefone = class(TInterfacedObject, ITelefone)
+
+  end;
+
+implementation
+
+end.
